@@ -1,16 +1,41 @@
 package br.com.fiap.domain.entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "TB_PROCESSO", uniqueConstraints = {
+        @UniqueConstraint(name = "UK_NUM_TB_PROCESSO", columnNames = "NUM_TB_PROCESSO")
+})
 public class Processo {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_TB_PROCESSO")
+    @SequenceGenerator(name = "SQ_TB_PROCESSO", sequenceName = "SQ_TB_PROCESSO")
+    @Column(name = "ID_TB_PROCESSO")
     private Long id;
 
+    @Column(name = "NUM_TB_PROCESSO", nullable = false)
     private String numero;
+
+    @Column(name = "PRO_TB_PROCESSO")
 
     private Boolean proBono;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(
+            name = "ID_TB_ADVOGADO",
+            referencedColumnName = "ID_TB_ADVOGADO",
+            foreignKey = @ForeignKey(name = "FK_TB_ADVOGADO")
+    )
     private Advogado advogado;
 
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(
+            name = "ID_TP_ACAO",
+            referencedColumnName = "ID_TP_ACAO",
+            foreignKey = @ForeignKey(name = "FK_TP_ACAO")
+    )
     private TipoDeAcao tipoDeAcao;
 
 
