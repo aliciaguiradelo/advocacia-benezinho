@@ -26,13 +26,13 @@ SIMULADO - Enterprise Application Development aplicada em 23/08/2023.
 
 # Estudo de caso
 
-Com o objetivo de aprimorar as atividades de trabalho, ideqlizamos o desenvolvimento de um Sistema de Gestão de Processos Judiciais.
+Com o objetivo de aprimorar as atividades de trabalho, idealizamos o desenvolvimento de um Sistema de Gestão de Processos Judiciais.
 
-Criaremos nesta aula um Produto Mínimo Viável (PMV) de um sistema para controle de processos judiciais. 
+Criaremos, nesta aula, um Produto Mínimo Viável (PMV) de um sistema para controle de processos judiciais. 
 
 
 
-Nossa equipe de analistas criou o Diagrama de Classes abaixo, e a sua missão aqui é realizar o Mapeamento Objeto Relacional das classes de Entidade. Usaremos a JPA e o Hibernate como ferramentas de Mapeamento Objeto Relacional.
+Nossa equipe de analistas desenvolveu o Diagrama de Classes abaixo, e a sua missão aqui é realizar o Mapeamento Objeto Relacional das classes de Entidade. Usaremos a JPA e o Hibernate como ferramentas de Mapeamento Objeto Relacional.
 
 Na sprint atual, você foi incumbido de fazer:
 
